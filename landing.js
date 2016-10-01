@@ -96,7 +96,6 @@ function yesNo () {
 	});
 }
 
-
 function region (long, lat) {
 	var hemisphere = "";
 	var season = "";
@@ -147,19 +146,21 @@ function region (long, lat) {
 function replaceBody (hemiSeason, temp, binary) {
 	// DEMO PURPOSES
 	// binary = true
+	tempC = Math.round(((temp-32)*5)/9);
+
 	if (binary) {
 		var yesStr = document.getElementById("yesPg").innerHTML;
 		var res = yesStr.slice(5,-4)
 		document.body.innerHTML = res
 		document.getElementById("hemisphereSeason").innerHTML = hemiSeason.hemiFull + " hemisphere/" + hemiSeason.seasonFull
-		document.getElementById("temperature").innerHTMP = temp + " F/" + ((temp-32)*5)/9 + " C"
+		document.getElementById("temperature").innerHTML = temp + " F/" + tempC + " C"
 		console.log(res)
 	} else {
 		var noStr = document.getElementById("noPg").innerHTML;
 		var res = noStr.slice(5,-4)
 		document.body.innerHTML = res
 		document.getElementById("hemisphereSeason").innerHTML = hemiSeason.hemiFull + " hemisphere/" + hemiSeason.seasonFull
-		document.getElementById("temperature").innerHTMP = temp + " F/" + ((temp-32)*5)/9 + " C"
+		document.getElementById("temperature").innerHTML = temp + " F/" + tempC + " C"
 		console.log(res)
 	}
 }
