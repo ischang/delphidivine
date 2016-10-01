@@ -25,6 +25,7 @@ var constellations =
             "SP" : ["Apus", "Chamaeleon", "Circinus", "Crux", "Dorado", "Hydrus", "Mensa", "Musca", "Norma", "Octans", "Pavo", "Triangulum Australe", "Tucana", "Volans"]
     };
 var date = new Date();
+var year = date.getFullYear()
 var month = date.getMonth() + 1;
 var date = date.getDate()
 
@@ -57,7 +58,7 @@ function yesNo () {
 					} else {
 						apiDate = date.toString()
 					}
-					var time = date.getFullYear().toString() + "-" + apiMonth + "-" + apiDate + "T21:00:00";
+					var time = year.toString() + "-" + apiMonth + "-" + apiDate + "T21:00:00";
 					var url = urlStr + API + lat.toString() + "," + long.toString() + "," + time + "/";
 					// var urlStr = "api.openweathermap.org/data/2.5/forecast?"
 					// var coord = "lat=" + lat.toString() + "&lon=" + long.toString();
