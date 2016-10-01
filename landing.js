@@ -26,6 +26,7 @@ var constellations =
     };
 var date = new Date();
 var month = date.getMonth() + 1;
+var date = date.getDate()
 
 function yesNo () {
 	console.log("1")
@@ -49,8 +50,14 @@ function yesNo () {
 						apiMonth = "0" + month.toString()
 					} else {
 						apiMonth = month.toString()
+					} 
+
+					if (date < 10) {
+						apiDate = "0" + date.toString()
+					} else {
+						apiDate = date.toString()
 					}
-					var time = date.getFullYear().toString() + "-" + apiMonth + "-" + date.getDate().toString() + "T21:00:00";
+					var time = date.getFullYear().toString() + "-" + apiMonth + "-" + apiDate + "T21:00:00";
 					var url = urlStr + API + lat.toString() + "," + long.toString() + "," + time + "/";
 					// var urlStr = "api.openweathermap.org/data/2.5/forecast?"
 					// var coord = "lat=" + lat.toString() + "&lon=" + long.toString();
