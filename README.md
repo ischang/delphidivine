@@ -1,4 +1,7 @@
 # delphidivine.github.io
+- the api endpoint we are hitting is deprecated (lol) 
+- to fix (if i ever get around to it): update api key and endpoint from the forecast.io page 
+
 # Delphi
 Delphi is a web and iOS application (as of Aug 28, 2016) that determines whether you're able to stargaze tonight depending on weather conditions. It shows you a list of constellations during the time and hemisphere you're in -- tThe web app uses the Forecast.io API, and the iOS app uses the OpenWeatherMap API. 
 
